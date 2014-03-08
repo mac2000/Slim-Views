@@ -81,9 +81,9 @@ class Twig extends \Slim\View
      * @param null $data
      * @return  void
      */
-    public function render($template, $data = null)
+    public function render($template, array $data = null)
     {
-        if (is_array($data) === true) {
+        if ($data) {
             $this->replace($data);
         }
         $env = $this->getInstance();
